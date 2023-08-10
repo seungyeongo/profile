@@ -13,6 +13,7 @@ $point-color-1: #ffc90e;
 $point-color-2: #fcf8e3;
 
 #wrap {
+	position: relative; /*기준점*/
 	min-width: 1200px;
 
 	> .loading {
@@ -40,4 +41,63 @@ $point-color-2: #fcf8e3;
 			transform: translate(-50%, -50%); //가세
 		}
 	} //end of .loading
+
+	> h1 {
+		position: absolute;
+		left: 50%;
+		top: 160px;
+		z-index: 100;
+		color: $pri-color-3;
+		text-transform: uppercase;
+		font-size: 24px;
+		transform: translate(-50%, 0);
+		// border: 1px solid #000;
+	} //end of h1
+
+	> #home {
+		overflow: hidden;
+		position: relative;
+
+		> .intro {
+			position: absolute;
+			left: 0;
+			top: 35%;
+			width: 100%;
+
+			text-align: center;
+			// border: 1px solid #fff;
+
+			> h2 {
+				color: $pri-color-2;
+				font-size: 60px;
+				line-height: 80px;
+
+				> span {
+					color: $sec-color-1;
+				}
+			} //end of h2
+
+			> p {
+				margin-top: 24px;
+				color: $pri-color-3;
+				line-height: 1.8;
+				letter-spacing: 1px;
+			} //end of p
+		} //end of .inter
+
+		> .bgmov {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			width: 100%;
+
+			> video {
+				min-width: 100%;
+				min-height: 100%;
+			}
+		} //end of video
+	} //end of #home
 } //end of #wrap
