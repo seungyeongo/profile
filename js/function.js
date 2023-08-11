@@ -7,7 +7,10 @@ $(function () {
 
 //
 $(function () {
+	const $h1 = $('h1');
 	const $home = $('#home');
+	const $intro = $home.children('.intro');
+
 	/*
         브라우저 화면의 크기
 
@@ -22,5 +25,10 @@ $(function () {
 
 	$(window).on('load resize', function () {
 		$home.height(window.innerHeight); //스크롤바와 툴바 미포함
+
+		$h1.css({
+			//선택된 요소가 body로부터 이르는 거리 (left, top)
+			top: $intro.offset().top - 72,
+		});
 	});
 });
